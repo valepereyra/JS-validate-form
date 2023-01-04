@@ -26,6 +26,7 @@ window.onload = function() {
     let state = document.getElementById("state");
     let postalCode = document.getElementById("postalCode");
     let message = document.getElementById("message");
+    let alert = document.getElementById("alert");
 
     if (
       card.value === "" ||
@@ -38,16 +39,16 @@ window.onload = function() {
       postalCode.value === "" ||
       message.value === ""
     ) {
-      console.log("El campo email está vacio");
-      card.style.background = "red";
-      cvc.style.background = "red";
-      amount.style.background = "red";
-      name.style.background = "red";
-      lastName.style.background = "red";
-      city.style.background = "red";
-      state.style.background = "red";
-      postalCode.style.background = "red";
-      message.style.background = "red";
+      alert.className = "alert alert-danger d-block";
+      card.style.background = "rgb(242, 214, 214)";
+      cvc.style.background = "rgb(242, 214, 214)";
+      amount.style.background = "rgb(242, 214, 214)";
+      name.style.background = "rgb(242, 214, 214)";
+      lastName.style.background = "rgb(242, 214, 214)";
+      city.style.background = "rgb(242, 214, 214)";
+      state.style.background = "rgb(242, 214, 214)";
+      postalCode.style.background = "rgb(242, 214, 214)";
+      message.style.background = "rgb(242, 214, 214)";
     }
   }
 };
