@@ -17,14 +17,37 @@ window.onload = function() {
   //declaramos la funcion que envia los datos del formulario
   function enviarDatos(e) {
     e.preventDefault(); // detiene tu comportamiento predeterminado del formulario e interpretado mi codigo
-    let email = document.getElementById("email");
-    let password = document.getElementById("password");
+    let card = document.getElementById("card");
+    let cvc = document.getElementById("cvc");
+    let amount = document.getElementById("amount");
+    let name = document.getElementById("name");
+    let lastName = document.getElementById("lastName");
+    let city = document.getElementById("city");
+    let state = document.getElementById("state");
+    let postalCode = document.getElementById("postalCode");
+    let message = document.getElementById("message");
 
-    console.log(email.value);
-    console.log(password.value);
-
-    if (email.value === "") {
+    if (
+      card.value === "" ||
+      cvc.value === "" ||
+      amount.value === "" ||
+      name.value === "" ||
+      lastName.value === "" ||
+      city.value === "" ||
+      state.value === "" ||
+      postalCode.value === "" ||
+      message.value === ""
+    ) {
       console.log("El campo email está vacio");
+      card.style.background = "red";
+      cvc.style.background = "red";
+      amount.style.background = "red";
+      name.style.background = "red";
+      lastName.style.background = "red";
+      city.style.background = "red";
+      state.style.background = "red";
+      postalCode.style.background = "red";
+      message.style.background = "red";
     }
   }
 };
